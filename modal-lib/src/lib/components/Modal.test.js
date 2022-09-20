@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 describe("Modal", () => {
   it("renders properly", () => {
     const tree = renderer
-      .create(<Modal title="Ici sera votre titre" Message="Ici sera votre message" btnMessage="Submit"/>)
+      .create(<Modal title="Your title modal" Message="Your message from the modal" btnMessage="Submit"/>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

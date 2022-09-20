@@ -1,7 +1,7 @@
 import React from "react";
 import "./modal.css";
 
-var TextInput = function TextInput(_ref) {
+var Modal = function Modal(_ref) {
     var title = _ref.title,
         message = _ref.message,
         btnMessage = _ref.btnMessage,
@@ -9,16 +9,10 @@ var TextInput = function TextInput(_ref) {
         closeModal = _ref.closeModal;
     return React.createElement(
         "div",
-        null,
-        React.createElement(
-            "h1",
-            null,
-            "lol"
-        ),
+        { className: "modal-container" },
         openModal === true && React.createElement(
             "div",
-            { className: "Modal" },
-            React.createElement("div", { className: "modal-section" }),
+            { className: "modal" },
             React.createElement(
                 "div",
                 { className: "modal-content" },
@@ -26,18 +20,9 @@ var TextInput = function TextInput(_ref) {
                     "div",
                     { className: "modal-title-content" },
                     React.createElement(
-                        "div",
+                        "h3",
                         { className: "modal-title" },
-                        React.createElement(
-                            "h3",
-                            null,
-                            title
-                        ),
-                        React.createElement(
-                            "button",
-                            { onClick: closeModal, className: "btn-close-icon" },
-                            React.createElement("i", { className: "fa fa-times" })
-                        )
+                        title
                     ),
                     React.createElement(
                         "p",
@@ -55,4 +40,4 @@ var TextInput = function TextInput(_ref) {
     );
 };
 
-export default TextInput;
+export default Modal;

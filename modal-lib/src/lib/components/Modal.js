@@ -1,35 +1,30 @@
 import React from "react";
 import "./modal.css";
 
-const TextInput = ({
+const Modal = ({
     title ,
     message,
     btnMessage,
     openModal,
     closeModal,
 
-}) => (
-    <div>
-        <h1>lol
-            
-        </h1>
+}) =>
+(
+    <div className="modal-container">
         {
             openModal === true &&
-            <div className='Modal'>
-                <div className="modal-section"></div>
+            <div className='modal'>
                 <div className="modal-content">
                     <div className='modal-title-content'>
-                        <div className='modal-title'>
-                            <h3>{title}</h3>
-                            <button onClick={closeModal} className="btn-close-icon"><i className="fa fa-times"></i></button>
-                        </div>
+                        <h3 className="modal-title">{title}</h3>
                         <p className='modal-paragraphe'>{message}</p>
                         <button onClick={closeModal} className="btn-close">{btnMessage}</button>
                     </div>
                 </div>
             </div>
-        }
-    </div>
+
+            }
+     </div>
 );
 
-export default TextInput;
+export default Modal;
